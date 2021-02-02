@@ -33,7 +33,6 @@ RUN apk --no-cache --no-progress upgrade && \
     echo '   strict locking = no' >>$file && \
     echo '   aio read size = 0' >>$file && \
     echo '   aio write size = 0' >>$file && \
-    echo '   vfs objects = catia fruit recycle streams_xattr' >>$file && \
     echo '   recycle:keeptree = yes' >>$file && \
     echo '   recycle:maxsize = 0' >>$file && \
     echo '   recycle:repository = .deleted' >>$file && \
@@ -46,12 +45,6 @@ RUN apk --no-cache --no-progress upgrade && \
     echo '   client min protocol = SMB2_10' >>$file && \
     echo '   server max protocol = SMB3' >>$file && \
     echo '   server min protocol = SMB2_10' >>$file && \
-    echo '' >>$file && \
-    echo '   # Time Machine' >>$file && \
-    echo '   fruit:delete_empty_adfiles = yes' >>$file && \
-    echo '   fruit:time machine = yes' >>$file && \
-    echo '   fruit:veto_appledouble = no' >>$file && \
-    echo '   fruit:wipe_intentionally_left_blank_rfork = yes' >>$file && \
     echo '' >>$file && \
     rm -rf /tmp/*
 
